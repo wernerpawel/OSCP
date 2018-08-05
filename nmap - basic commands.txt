@@ -1,4 +1,4 @@
-*************** Simple scan using NMAP ***************
+*************** SIMPLE NMAP SCAN ***************
 
 1. Target Selection
 
@@ -47,9 +47,7 @@ b. Aggressive Service Detection (for e.g - if there are services running on unus
 c. Light banner grabbing detection  (fast way)
 - nmap -sV --version-intensity 0 192.168.1.1
 
-
 *************** ENUMERATION ***************
-
 
 4. IP Information check:
 - nmap --script=asn-query,whois,ip-geolocation-maxmind 192.168.1.0/24
