@@ -11,10 +11,10 @@ b. Single host
 c. IP RANGE
 - nmap 192.168.1.1-99
 
-Subnet
+d. Subnet
 - nmap 192.168.1.0/24
 
-From a text file
+e. From a text file
 - nmap -iL your-list.txt
 
 *************** PORTS ***************
