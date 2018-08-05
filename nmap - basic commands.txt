@@ -1,0 +1,84 @@
+*************** Simple scan using NMAP ***************
+
+1. Target Selection
+
+a. SINGLE IP
+- nmap 192.168.1.1
+
+b. Single host
+- nmap www.testhostname.com
+
+c. IP RANGE
+- nmap 192.168.1.1-99
+
+Subnet
+- nmap 192.168.1.0/24
+
+From a text file
+- nmap -iL your-list.txt
+
+*************** PORTS ***************
+
+2. Port Selection
+
+a. Single port SCAN
+- nmap -p 80 2 192.168.1.1
+
+b. Port RANGE
+- nmap -p 1-99 192.168.1.1
+
+c. Most common ports
+- nmap -F 192.168.1.1
+
+d. All 65535 ports
+- nmap -p- 192.168.1.1
+
+*************** VERSION CHECK ***************
+
+3. OS detection
+- nmap -A 192.168.1.1
+
+a. Service detection
+- nmap -sV 192.168.1.1
+
+b. Aggressive Service Detection (for e.g - if there are services running on unusual ports)
+- nmap -sV --version-intensity 5 192.168.1.1
+
+c. Light banner grabbing detection  (fast way)
+- nmap -sV --version-intensity 0 192.168.1.1
+
+
+*************** ENUMERATION ***************
+
+
+4. IP Information check:
+- nmap --script=asn-query,whois,ip-geolocation-maxmind 192.168.1.0/24
+
+a. Port Scan types
+Scan using TCP connect
+- nmap -sT 192.168.1.1
+
+b. Scan using TCP SYN scan
+- nmap -sS 192.168.1.1
+
+c. Scan selected ports - ignore discovery
+- nmap -Pn -F 192.168.1.1
+
+d. Scan UDP ports 
+- nmap -sU -p 123,161,162 192.168.1.1
+
+*************** OUTPUT TO FILE ***************
+
+5. Nmap Output Formats
+
+a. Save default output to (txt) file
+- nmap -oN xxx.txt 192.168.1.1
+
+b. Save output to xml file
+- nmap -oX xxx.xml 192.168.1.1
+
+c. Save results in a format for grep
+- nmap -oG outputfile.txt 192.168.1.1
+
+d. Save in all formats
+- nmap -oA outputfile 192.168.1.1
