@@ -1,17 +1,21 @@
-On a lot of systems, you should be able to connect to it as root (the mysql root user) with no password:
+Author: Pawel Werner
+e-mail: pawel.k.werner@gmail.com
+linkedin: https://www.linkedin.com/in/pawe%C5%82-werner-31b40a53/
 
- $ mysql -u root
+*************** MySQL *************** 
 
-Once you get access to the database, you should be able to navigate it using the following queries:
+1. On a lot of systems, you should be able to connect to it as root (the mysql root user) with no password:
+
+- $ mysql -u root
+
+2. Once you get access to the database, you should be able to navigate it using the following queries:
 
     show databases;
     use [DATABASE];
     show tables;
     select * from [TABLE];
 
-Where [DATABASE] and [TABLE] should be replaced by the value from the previous queries. 
-
------------------------------------------------Login as MYSQL------------------------------------------------
+3. Login as MYSQL
 
 There can exist issues like this one:
 - Trivial password.
