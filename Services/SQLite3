@@ -1,0 +1,17 @@
+Author: Pawel Werner
+e-mail: pawel.k.werner@gmail.com
+linkedin: https://www.linkedin.com/in/pawe%C5%82-werner-31b40a53/
+
+*************** SQLite3 *************** 
+
+Copydatabase to /tmp
+
+$ file [FILENAME] (checking the file)
+database.db: SQLite 3.x database
+You can then access it using:
+
+$ sqlite3 [FILENAME]
+Once you gain access to it, you can navigate the content using:
+
+- .tables - to get a list of tables.
+- SELECT .... to extract the content of a table using SQL.
