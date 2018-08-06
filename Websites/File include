@@ -31,4 +31,5 @@ The function used is include().
 
 4. Using NULL BYTE (%00) - PHP solved this type of bypass since the version (5.3.4)
 
-http://test.com/?page=../../../../../../../etc/passwd%00
+http://test.com/?page=../../../../../../../etc/passwd%00 (LFI)
+
