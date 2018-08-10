@@ -1,4 +1,4 @@
-# Regular Expression Cheat Sheet - PCRE 
+# Regular Expression Cheat Sheet
 
 |Anchor|Description|Example|Valid match|Invalid|
 :---|:---|:---|:---|---
