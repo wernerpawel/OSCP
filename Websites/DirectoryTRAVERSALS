@@ -16,3 +16,7 @@ As with other vulnerabilities, you can use the "same value technique" to test fo
 Once you have tested that, you can try to retrieve other files. On Linux/Unix the most common test case is the /etc/passwd. You can test: images/../../../../../../../../../../../etc/passwd, if you get the passwd file, the application is vulnerable. The good news is that you don't need to know the number of ../. If you put too many, it will still work.
 
 Another interesting thing to know is that if you have a directory traversal in Windows, you will be able to access test/../../../file.txt, even if the directory test does not exist. This is not the case, on Linux. This can be really useful where the code concatenates user-controlled data, to create a file name. For example, the following PHP code is supposed to add the parameter id to get a file name (example_1.txt for example). On Linux, you won't be able to exploit this vulnerability if there is no directory starting by example_, whereas on Windows, you will be able to exploit it, even if there is no such directory.
+
+USING NULL BYTE:
+
+http://website.com/file.php?file=/../../../etc/passwd%00
