@@ -10,3 +10,8 @@ http://webiste.com/?url=http://127.0.0.1:1234 (service on port 1234)
 b. IF 127.0.0.1 is blacklisted, try:
 http://webiste.com/?url=http://localhost:1234 (service on port 1234)
 
+c. IF 127.0.0.1 & localhost are blacklisted, try:
+http://webiste.com/?url=http://0.0.0.0:1234 (service on port 1234) 
+
+0.0.0.0  is a non-routable meta-address used to designate an invalid, unknown or non applicable target (a no particular address placeholder).
+
