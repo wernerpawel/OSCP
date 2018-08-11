@@ -15,3 +15,6 @@ http://webiste.com/?url=http://0.0.0.0:1234 (service on port 1234)
 
 0.0.0.0  is a non-routable meta-address used to designate an invalid, unknown or non applicable target (a no particular address placeholder).
 
+2. Using REGEX
+
+http://website.com/?url=http://example.com.anotherexamaple.link:1234
