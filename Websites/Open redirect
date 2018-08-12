@@ -1,0 +1,1 @@
+Open Redirect vulnerabilities allows you to redirect the victim to a malicious website. They are low impact vulnerabilities in most cases unless you can use them to leak Oauth tokens.
