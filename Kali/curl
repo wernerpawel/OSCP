@@ -1,0 +1,3 @@
+Exam the HTTP options:
+
+curl -v -X OPTIONS http://xxx.xx/xxx/
