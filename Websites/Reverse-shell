@@ -1,0 +1,4 @@
+1. Change the IP and PORT in script
+2. Upload php-reverse-shell file
+3. Run nc -nlvp 1234 {port} on your machine
+4. Go to uploaded script via browser
