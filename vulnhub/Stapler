@@ -22,3 +22,9 @@ results:
 3. Checking http://192.168.56.102:12380/blogblog/ with wpscan
 > wpscan --url http://192.168.56.102:12380/blogblog/ > target site return SSL/TLS ERROR
 > checking wpscan with disabled TLS checks: wpscan --url http://192.168.56.102:12380/blogblog/ --disable-tls-checks
+results:
+> /wp-content/uploads > /wp-content/ include installed plugins (adv. video, short code, two factor)
+> /wp-includes/
+
+4. Looking for vul. in installed plugins
+> found LFI exploit for that > https://www.exploit-db.com/exploits/39646/
