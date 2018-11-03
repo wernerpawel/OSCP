@@ -12,3 +12,13 @@ results:
 > 666/tcp
 > 3306/tcp
 > 12380/tcp
+
+2. Checking port http://192.168.56.102:12380 - fund a website..
+> nikto -h 192.168.56.102:12380
+results:
+> /blogblog/ > wordpress site
+> /admin112233/
+
+3. Checking http://192.168.56.102:12380/blogblog/ with wpscan
+> wpscan --url http://192.168.56.102:12380/blogblog/ > target site return SSL/TLS ERROR
+> checking wpscan with disabled TLS checks: wpscan --url http://192.168.56.102:12380/blogblog/ --disable-tls-checks
