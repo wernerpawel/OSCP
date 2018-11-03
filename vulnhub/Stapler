@@ -1,1 +1,14 @@
 
+STAPLER VM from VH > https://www.vulnhub.com/entry/stapler-1,150/
+
+1. Nmap scanning host 
+> nmap -sV 192.168.56.102 -p 0-655535 --open
+> results:
+> 21/tcp
+> 22/tcp
+> 53/tcp
+> 80/tcp
+> 139/tcp
+> 666/tcp
+> 3306/tcp
+> 12380/tcp
