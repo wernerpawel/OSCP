@@ -11,4 +11,4 @@ STAPLER VM from VH > https://www.vulnhub.com/entry/stapler-1,150/
 > 139/tcp
 > 666/tcp
 > 3306/tcp
-> 12380/tcp
+> `12380/tcp`
