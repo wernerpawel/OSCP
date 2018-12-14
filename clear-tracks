@@ -1,2 +1,15 @@
-1. /root/Desktop/Loot -type f -exec shred -z -u {} \;
+1.0 - WINDOWS
+wmic /node:10.39.5.50 /user:Administrator /password:Pa22w0rd process call create "cmd.exe /c wevtutil cl Application"
+The wevtutil utility clears the event log specified—in this case, the Application log.
+
+1.1 - KALI
+/root/Desktop/Loot -type f -exec shred -z -u {} \;
 The shred command works only on files, so you need to pair it with find and the -exec option to execute shred on all files in the specified directory. As for the shred command itself, the -u option removes the files after they've been overwritten, and the -z flag does a final overwrite pass to hide the fact that shredding took place.
+
+1.2 
+rm -r /root/Desktop/Loot 
+This command removes the directory.
+
+1.3 - KALI
+echo "" > /var/log/auth.log
+This clears the authentication log so that the attacker's login information isn't recorded for a forensic investigator to analyze.
