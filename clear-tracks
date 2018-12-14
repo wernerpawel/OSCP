@@ -1,0 +1,2 @@
+1. /root/Desktop/Loot -type f -exec shred -z -u {} \;
+The shred command works only on files, so you need to pair it with find and the -exec option to execute shred on all files in the specified directory. As for the shred command itself, the -u option removes the files after they've been overwritten, and the -z flag does a final overwrite pass to hide the fact that shredding took place.
